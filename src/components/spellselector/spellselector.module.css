@@ -1,0 +1,76 @@
+.spellImg {
+    width: 8rem;
+    border-radius: 1rem;
+    border: 2px white solid;
+}
+
+.card {
+    background-color: black;
+    margin: 1rem;
+    padding: 2rem 0;
+    padding-bottom: 0;
+    border-radius: 1rem;
+}
+
+.selectWrap {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lvlBox {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.4rem;
+    position: relative;
+    transform: translate(0.5rem, -5.3rem);
+    background-color: rgb(47, 47, 47);
+    border: 2px rgb(0, 0, 0) solid;
+    font-size: 1.8rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.lvlBoxMax {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.4rem;
+    position: relative;
+    transform: translate(0.5rem, -5.3rem);
+    background-color: rgb(255, 179, 0);
+    border: 2px rgb(255, 225, 154) solid;
+    font-size: 1.8rem;
+    text-align: center;
+    z-index: 2;
+    color: black;
+}
+
+.card p {
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.slider {
+    -webkit-appearance: none;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 8rem;
+    background: white;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px white solid;
+}
+
+.sliderZap::-webkit-slider-thumb {
+    background: #0066ff;
+}
+
+.sliderEq::-webkit-slider-thumb {
+    background: #d77142;
+}

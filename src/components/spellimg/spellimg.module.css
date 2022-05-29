@@ -1,0 +1,32 @@
+.spellImg {
+    width: 8rem;
+    border-radius: 1rem;
+    border: 2px white solid;
+}
+
+.lvlBox {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.4rem;
+    position: relative;
+    transform: translate(0.5rem, -2.9rem);
+    background-color: rgb(47, 47, 47);
+    border: 2px rgb(0, 0, 0) solid;
+    font-size: 1.8rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.lvlBoxMax {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.4rem;
+    position: relative;
+    transform: translate(0.5rem, -2.9rem);
+    background-color: rgb(255, 179, 0);
+    border: 2px rgb(255, 225, 154) solid;
+    font-size: 1.8rem;
+    text-align: center;
+    z-index: 2;
+    color: black;
+}
