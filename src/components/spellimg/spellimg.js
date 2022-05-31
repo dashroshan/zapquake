@@ -7,6 +7,7 @@ const SpellImg = (props) => {
         <div className={classes.wrapper}>
             <img className={classes.spellImg} src={(props.type == "zap") ? zapImg : eqImg} />
             <div className={(((props.type == "zap" && props.level == 9) || (props.type != "zap" && props.level == 5))) ? classes.lvlBoxMax : classes.lvlBox}>{props.level}</div>
+            <div className={classes.ccOrOwn}>{props.iscc ? "CC" : "OWN"}</div>
         </div>
     );
 }

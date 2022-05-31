@@ -1,0 +1,52 @@
+.card {
+    background-color: rgb(25, 33, 44);
+    margin: 1rem;
+    padding: 2rem 0;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    -webkit-appearance: none;
+    border-radius: 0.5rem;
+    height: 1rem;
+    width: 8.8rem;
+    background: white;
+    margin: 0.13rem 0.5rem;
+    transform: translateY(0.11rem);
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px white solid;
+    background-color: rgb(61, 68, 79);
+}
+
+.card span {
+    font-size: 1.1rem;
+}
+
+.wardenLvl {
+    width: 2rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    margin: 0 0.3rem;
+}
+
+.warden {
+    display: block;
+    margin-top: 1rem;
+}
+
+input {
+    font-family: supercell;
+    font-size: 1.1rem;
+    text-align: center;
+}

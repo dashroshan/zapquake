@@ -1,9 +1,30 @@
 nav {
-    height: 5rem;
-    background-color: #000000;
+    height: 6rem;
+    background-color: rgb(25, 33, 44);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.heading {
     font-weight: bold;
+    margin-top: 0.2rem;
     font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+}
+
+.tag {
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    color: rgb(100, 111, 128);
+}
+
+.tag a {
+    color: rgb(100, 111, 128);
+    text-decoration: none;
+    cursor: pointer;
 }

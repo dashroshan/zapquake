@@ -1,14 +1,7 @@
-.spellImg {
-    width: 8rem;
-    border-radius: 1rem;
-    border: 2px white solid;
-}
-
 .card {
-    background-color: black;
+    background-color: rgb(25, 33, 44);
     margin: 1rem;
     padding: 2rem 0;
-    padding-bottom: 0;
     border-radius: 1rem;
 }
 
@@ -17,39 +10,8 @@
     justify-content: space-evenly;
 }
 
-.lvlBox {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 0.4rem;
-    position: relative;
-    transform: translate(0.5rem, -5.3rem);
-    background-color: rgb(47, 47, 47);
-    border: 2px rgb(0, 0, 0) solid;
-    font-size: 1.8rem;
-    text-align: center;
-    z-index: 2;
-}
-
-.lvlBoxMax {
-    height: 2rem;
-    width: 2rem;
-    border-radius: 0.4rem;
-    position: relative;
-    transform: translate(0.5rem, -5.3rem);
-    background-color: rgb(255, 179, 0);
-    border: 2px rgb(255, 225, 154) solid;
-    font-size: 1.8rem;
-    text-align: center;
-    z-index: 2;
-    color: black;
-}
-
-.card p {
-    margin: 0;
-    margin-top: 1rem;
-}
-
 .slider {
+    margin-top: 0.7rem;
     -webkit-appearance: none;
     border-radius: 0.5rem;
     height: 1rem;
@@ -73,4 +35,19 @@
 
 .sliderEq::-webkit-slider-thumb {
     background: #d77142;
+}
+
+@media (max-width: 45rem) {
+    .selectWrap {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
+        margin: 0.2rem 5vw;
+    }
+
+    .selectWrap span {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

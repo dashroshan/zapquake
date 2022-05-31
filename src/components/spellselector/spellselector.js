@@ -10,30 +10,35 @@ class SpellSelector extends Component {
     state = {
         zap: 4,
         eq: 4,
+        cczap: 4,
+        cceq: 4,
     }
 
     zapChanged = (event) => this.setState({ zap: event.target.value });
     eqChanged = (event) => this.setState({ eq: event.target.value });
+    ccZapChanged = (event) => this.setState({ cczap: event.target.value });
+    ccEqChanged = (event) => this.setState({ cceq: event.target.value });
 
     render() {
         return (
             <div className={classes.card} >
                 <div className={classes.selectWrap}>
                     <span>
-                        <img className={classes.spellImg} src={zapImg} />
-                        <p>
-                            <input class={classes.slider + " " + classes.sliderZap} type="range" min="1" max="9" value={this.state.zap} onChange={this.zapChanged} />
-                        </p>
-                        <div className={(this.state.zap == 9) ? classes.lvlBoxMax : classes.lvlBox}>{this.state.zap}</div>
+                        <SpellImg type="zap" level={this.state.zap} iscc={false} />
+                        <input class={classes.slider + " " + classes.sliderZap} type="range" min="1" max="9" value={this.state.zap} onChange={this.zapChanged} />
                     </span >
                     <span>
-                        <img className={classes.spellImg} src={eqImg} />
-                        <p>
-                            <input class={classes.slider + " " + classes.sliderEq} type="range" min="1" max="5" value={this.state.eq} onChange={this.eqChanged} />
-                        </p>
-                        <div className={(this.state.eq == 5) ? classes.lvlBoxMax : classes.lvlBox}>{this.state.eq}</div>
+                        <SpellImg type="eq" level={this.state.eq} iscc={false} />
+                        <input class={classes.slider + " " + classes.sliderEq} type="range" min="1" max="5" value={this.state.eq} onChange={this.eqChanged} />
                     </span>
-                    <SpellImg type="zap" level="5" />
+                    <span>
+                        <SpellImg type="zap" level={this.state.cczap} iscc={true} />
+                        <input class={classes.slider + " " + classes.sliderZap} type="range" min="1" max="9" value={this.state.cczap} onChange={this.ccZapChanged} />
+                    </span >
+                    <span>
+                        <SpellImg type="eq" level={this.state.cceq} iscc={true} />
+                        <input class={classes.slider + " " + classes.sliderEq} type="range" min="1" max="5" value={this.state.cceq} onChange={this.ccEqChanged} />
+                    </span>
                 </div>
             </div >
         );
