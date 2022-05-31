@@ -8,10 +8,10 @@ import { SpellImg } from '../spellimg/spellimg';
 class SpellSelector extends Component {
 
     state = {
-        zap: 4,
-        eq: 4,
-        cczap: 4,
-        cceq: 4,
+        zap: 1,
+        eq: 1,
+        cczap: 1,
+        cceq: 1,
     }
 
     zapChanged = (event) => this.setState({ zap: event.target.value });
