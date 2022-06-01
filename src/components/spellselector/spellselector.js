@@ -23,19 +23,19 @@ class SpellSelector extends Component {
         return (
             <div className={classes.card} >
                 <div className={classes.selectWrap}>
-                    <span>
+                    <span className={classes.spellSection}>
                         <SpellImg type="zap" level={this.state.zap} iscc={false} />
                         <input class={classes.slider + " " + classes.sliderZap} type="range" min="1" max="9" value={this.state.zap} onChange={this.zapChanged} />
                     </span >
-                    <span>
+                    <span className={classes.spellSection}>
                         <SpellImg type="eq" level={this.state.eq} iscc={false} />
                         <input class={classes.slider + " " + classes.sliderEq} type="range" min="1" max="5" value={this.state.eq} onChange={this.eqChanged} />
                     </span>
-                    <span>
+                    <span className={classes.spellSection}>
                         <SpellImg type="zap" level={this.state.cczap} iscc={true} />
                         <input class={classes.slider + " " + classes.sliderZap} type="range" min="1" max="9" value={this.state.cczap} onChange={this.ccZapChanged} />
                     </span >
-                    <span>
+                    <span className={classes.spellSection}>
                         <SpellImg type="eq" level={this.state.cceq} iscc={true} />
                         <input class={classes.slider + " " + classes.sliderEq} type="range" min="1" max="5" value={this.state.cceq} onChange={this.ccEqChanged} />
                     </span>

@@ -1,6 +1,8 @@
 nav {
-    height: 6rem;
-    background-color: rgb(25, 33, 44);
+    height: 5rem;
+    background: linear-gradient(0deg, rgba(54, 54, 54, 1) 30%, rgba(76, 76, 74, 1) 100%);
+    border-bottom: 0.5rem solid rgb(50, 50, 50);
+    border-top: 0.5rem solid rgb(83, 82, 82);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,11 +22,11 @@ nav {
 .tag {
     font-size: 0.8rem;
     margin-top: 0.2rem;
-    color: rgb(100, 111, 128);
+    color: rgb(193, 190, 190);
 }
 
 .tag a {
-    color: rgb(100, 111, 128);
+    color: rgb(193, 190, 190);
     text-decoration: none;
     cursor: pointer;
 }
