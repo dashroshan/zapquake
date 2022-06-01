@@ -31,7 +31,7 @@
     border-radius: 30%;
     cursor: pointer;
     border: 0.15rem white solid;
-    transition: ease-in-out 100ms transform;
+    transition: ease-in-out 300ms transform;
 }
 
 .slider::-webkit-slider-thumb:hover {
