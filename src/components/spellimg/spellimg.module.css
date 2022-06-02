@@ -25,7 +25,7 @@
     position: absolute;
     transform: translate(-7.8rem, 5.6rem);
     background-color: rgb(255, 179, 0);
-    border: 2px rgb(255, 225, 154) solid;
+    border: 0.15rem rgb(255, 225, 154) solid;
     font-size: 1.8rem;
     text-align: center;
     z-index: 2;
@@ -42,6 +42,6 @@
     background-color: rgb(41, 47, 62);
     padding: 0.3rem 0.5rem;
     border-radius: 0.3rem;
-    border: 2px rgb(0, 0, 0) solid;
+    border: 0.15rem rgb(0, 0, 0) solid;
     letter-spacing: 0.05rem;
 }
