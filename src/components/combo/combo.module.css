@@ -74,6 +74,11 @@
     opacity: 50%;
 }
 
+.noCombo {
+    color: #5f5f5f;
+    margin: 1rem 2rem;
+}
+
 @media (max-width: 45rem) {
     .combos {
         flex-direction: column;

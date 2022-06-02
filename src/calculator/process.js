@@ -11,6 +11,8 @@ const adjustWardenAura = (buildingHp, wardenLvl) => {
 }
 
 const getCombos = (buildingId, buildingLvl, zapLvl, eqLvl, ccSpace, ccZapLvl, ccEqLvl, wardenLvl) => {
+    if (buildingLvl == NaN) buildingLvl = 0;
+    if (wardenLvl == NaN) wardenLvl = 0;
     let buildingHp = adjustWardenAura(hp[buildingId]["hp"][buildingLvl], wardenLvl);
     let zapDmg = dmg[1][zapLvl];
     let ccZapDmg = dmg[1][ccZapLvl];
@@ -64,6 +66,7 @@ const getCombos = (buildingId, buildingLvl, zapLvl, eqLvl, ccSpace, ccZapLvl, cc
         if (combo[2] + combo[3] == minimumCombos[0][2] + minimumCombos[0][3])
             finalCombos.push([combo[0], combo[1], combo[2], combo[3]]);
     }
+    return finalCombos;
 }
 
 export { getCombos };

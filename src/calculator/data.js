@@ -43,7 +43,7 @@ const aura = [
 ];
 
 const hp = [
-    { "name": "0 Ignore" },
+    { "name": "0 Ignore", "hp": [1] },
     {
         "name": "Archer Queen",
         "hp": [

@@ -2,7 +2,7 @@ import classes from './combo.module.css';
 import zapImg from '../../assets/zap.png';
 import eqImg from '../../assets/quake.png';
 
-const Combo = () => {
+const Combo = (props) => {
     const comboTile = (img, type, total, level, spell) => {
         return (<div className={(total == 0) ? `${classes.wrapper} ${classes.greyOut}` : `${classes.wrapper}`}>
             <img className={classes.spellImg} src={img} />
@@ -13,15 +13,24 @@ const Combo = () => {
 
     const comboTileWrap = (quantity) => {
         return (<div className={classes.card}>
-            {comboTile(zapImg, "own", quantity[0], 4, "zap")}
-            {comboTile(eqImg, "own", quantity[1], 5, "eq")}
-            {comboTile(zapImg, "cc", quantity[2], 9, "zap")}
-            {comboTile(eqImg, "cc", quantity[3], 4, "eq")}
+            {comboTile(zapImg, "own", quantity[0], props.levels[0], "zap")}
+            {comboTile(eqImg, "own", quantity[1], props.levels[1], "eq")}
+            {comboTile(zapImg, "cc", quantity[2], props.levels[2], "zap")}
+            {comboTile(eqImg, "cc", quantity[3], props.levels[3], "eq")}
         </div>);
+    }
+
+    const allCombos = () => {
+        let combos = [];
+        for (let combo of props.combos) combos.push(comboTileWrap(combo));
+        return combos;
     }
     return (
         <div className={classes.combos}>
-            {comboTileWrap([1, 0, 3, 0])}
+            {(props.combos == []) ? <div className={classes.card}>
+                <div className={classes.noCombo}>No valid combos found!</div>
+            </div> : allCombos()}
+
         </div>
     );
 }
