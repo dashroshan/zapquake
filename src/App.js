@@ -13,9 +13,9 @@ class App extends Component {
         cczap: 3,
         cceq: 4,
         ccSpace: 0,
-        defId: 1,
+        defId: 0,
         defLvl: 1,
-        warden: 0,
+        warden: 1,
         toShow: 0,
         combos: [],
     };
@@ -26,23 +26,21 @@ class App extends Component {
     ccEqChanged = (event) => this.setState({ cceq: parseInt(event.target.value), toShow: 0 });
     ccSpaceChanged = (event) => this.setState({ ccSpace: parseInt(event.target.value), toShow: 0 });
     defIdChanged = (id) => this.setState({ defId: parseInt(id.value), toShow: 0 });
-    defLvlChanged = (event) => this.setState({ defLvl: parseInt(event), toShow: 0 });
+    defLvlChanged = (event) => this.setState({ defLvl: parseInt(event.target.value), toShow: 0 });
     wardenChanged = (event) => this.setState({ warden: parseInt(event.target.value), toShow: 0 });
 
     calculate = () => {
         let combos = getCombos(this.state.defId, this.state.defLvl, this.state.zap, this.state.eq, this.state.ccSpace, this.state.cczap, this.state.cceq, this.state.warden);
-        console.log(combos);
         this.setState({ toShow: 1, combos: combos })
     }
 
     render() {
-        console.log(this.state);
         return (
             <div className="App">
                 <NavBar />
                 <SpellSelector zapChanged={this.zapChanged} eqChanged={this.eqChanged} ccZapChanged={this.ccZapChanged} ccEqChanged={this.ccEqChanged} zap={this.state.zap} eq={this.state.eq} cczap={this.state.cczap} cceq={this.state.cceq} />
                 {(this.state.toShow) ? <Combo combos={this.state.combos} levels={[this.state.zap, this.state.eq, this.state.cczap, this.state.cceq]} /> : null}
-                <MiscSelector ccSpaceChanged={this.ccSpaceChanged} defIdChanged={this.defIdChanged} defId={this.state.defId} ccSpace={this.state.ccSpace} defLvlChanged={this.defLvlChanged} wardenChanged={this.wardenChanged} calculate={this.calculate} />
+                <MiscSelector ccSpaceChanged={this.ccSpaceChanged} defIdChanged={this.defIdChanged} defId={this.state.defId} ccSpace={this.state.ccSpace} defLvl={this.state.defLvl} warden={this.state.warden} defLvlChanged={this.defLvlChanged} wardenChanged={this.wardenChanged} calculate={this.calculate} />
             </div>
         );
     }

@@ -83,7 +83,7 @@ input {
     width: 13rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1.7rem;
+    margin-top: 1.4rem;
     display: block;
     cursor: pointer;
     transition: ease-in-out 300ms transform;
@@ -94,6 +94,10 @@ input {
 }
 
 .currentCC {
-    width: 1rem;
+    width: 1.2rem;
     display: inline-block;
+}
+
+.sliders {
+    margin: 0.5rem 0;
 }
