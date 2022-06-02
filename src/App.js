@@ -9,9 +9,9 @@ import { getCombos } from './calculator/process';
 class App extends Component {
     state = {
         zap: 1,
-        eq: 2,
-        cczap: 3,
-        cceq: 4,
+        eq: 1,
+        cczap: 1,
+        cceq: 1,
         ccSpace: 0,
         defId: 0,
         defLvl: 1,
