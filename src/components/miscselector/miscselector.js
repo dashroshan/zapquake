@@ -30,7 +30,7 @@ class MiscSelector extends Component {
             <div className={classes.card}>
                 <div>
                     <span><Select className={classes.select} menuPlacement="top" isSearchable={false} placeholder="Select defense/hero" options={this.generateOptions()} onChange={id => this.setState({ defId: id.value })} /></span>
-                    <span>CC Spell Space</span><input class={classes.slider} type="range" min="0" max="3" value={this.state.ccSpace} onChange={this.ccSpaceChanged} /><span>{this.state.ccSpace}</span>
+                    <span>CC Spell Space</span><input class={classes.slider} type="range" min="0" max="3" value={this.state.ccSpace} onChange={this.ccSpaceChanged} /><span className={classes.currentCC}>{this.state.ccSpace}</span>
                     <span className={classes.level}>Defense/hero Level <input type="text" placeholder={this.levelRange()} className={classes.defLvl} /></span>
                     {(this.state.defId < 4) ? < span className={classes.warden}>Enemy Warden Level (Optional) <input type="text" placeholder='0' className={classes.wardenLvl} /></span> : null}
                     <img src={buttonImg} className={classes.calcBtn} />

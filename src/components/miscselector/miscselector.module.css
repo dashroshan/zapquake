@@ -92,3 +92,8 @@ input {
 .calcBtn:hover {
     transform: scale(103%);
 }
+
+.currentCC {
+    width: 1rem;
+    display: inline-block;
+}

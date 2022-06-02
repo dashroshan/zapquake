@@ -12,21 +12,7 @@ nav {
     text-align: center;
 }
 
-.heading {
-    font-weight: bold;
-    margin-top: 0.2rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.05rem;
-}
-
-.tag {
-    font-size: 0.8rem;
-    margin-top: 0.2rem;
-    color: rgb(193, 190, 190);
-}
-
-.tag a {
-    color: rgb(193, 190, 190);
-    text-decoration: none;
+.navText {
+    width: 16rem;
     cursor: pointer;
 }
