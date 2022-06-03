@@ -25,7 +25,7 @@ class App extends Component {
     ccZapChanged = (event) => this.setState({ cczap: parseInt(event.target.value), toShow: 0 });
     ccEqChanged = (event) => this.setState({ cceq: parseInt(event.target.value), toShow: 0 });
     ccSpaceChanged = (event) => this.setState({ ccSpace: parseInt(event.target.value), toShow: 0 });
-    defIdChanged = (id) => this.setState({ defId: parseInt(id.value), toShow: 0 });
+    defIdChanged = (id) => this.setState({ defId: parseInt(id.value), defLvl: 1, toShow: 0 });
     defLvlChanged = (event) => this.setState({ defLvl: parseInt(event.target.value), toShow: 0 });
     wardenChanged = (event) => this.setState({ warden: parseInt(event.target.value), toShow: 0 });
 

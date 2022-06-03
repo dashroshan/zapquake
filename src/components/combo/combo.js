@@ -25,7 +25,6 @@ const Combo = (props) => {
         for (let combo of props.combos) combos.push(comboTileWrap(combo));
         return combos;
     }
-    console.log(props.combos);
     return (
         <div className={classes.combos}>
             {(props.combos.length == 0) ? <div className={classes.card}>

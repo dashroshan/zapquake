@@ -25,7 +25,7 @@ const getCombos = (buildingId, buildingLvl, zapLvl, eqLvl, ccSpace, ccZapLvl, cc
         for (let e = 0; e < 15; e++)
             for (let cz = 0; cz < ccSpace + 1; cz++)
                 for (let ce = 0; ce < ccSpace + 1; ce++)
-                    if ((z + e + cz + ce <= 14) && ((isHero && e == 0 && ce == 0) || !isHero))
+                    if ((z + e + cz + ce <= 14) && ((isHero && e == 0 && ce == 0) || !isHero) && (cz + ce <= ccSpace))
                         combos.push([z + e + cz + ce, z, e, cz, ce, cz + ce]);
 
     let validCombos = [];
