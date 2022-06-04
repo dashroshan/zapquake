@@ -6,7 +6,7 @@ const Combo = (props) => {
     const comboTile = (img, type, total, level, spell) => {
         return (<div className={(total == 0) ? `${classes.wrapper} ${classes.greyOut}` : `${classes.wrapper}`}>
             <img className={classes.spellImg} src={img} />
-            <div className={(((spell == "zap" && level == 9) || (type != "zap" && level == 5))) ? classes.lvlBoxMax : classes.lvlBox}>{level}</div>
+            <div className={(((spell == "zap" && level == 9) || (type == "eq" && level == 5))) ? classes.lvlBoxMax : classes.lvlBox}>{level}</div>
             <div className={classes.ccOrOwn}>{type} x {total}</div>
         </div>);
     }

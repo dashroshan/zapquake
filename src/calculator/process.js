@@ -66,6 +66,7 @@ const getCombos = (buildingId, buildingLvl, zapLvl, eqLvl, ccSpace, ccZapLvl, cc
         if (combo[2] + combo[3] == minimumCombos[0][2] + minimumCombos[0][3])
             finalCombos.push([combo[0], combo[1], combo[2], combo[3]]);
     }
+    console.log(buildingId, buildingLvl, zapLvl, eqLvl, ccSpace, ccZapLvl, ccEqLvl, wardenLvl, finalCombos);
     return finalCombos;
 }
 

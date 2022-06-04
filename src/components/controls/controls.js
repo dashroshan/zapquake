@@ -1,4 +1,4 @@
-import classes from './spellselector.module.css';
+import classes from './controls.module.css';
 import Select from 'react-select'
 import { hp } from '../../calculator/data';
 import zapImg from '../../assets/zap.png';
@@ -40,7 +40,7 @@ const SpellSelector = (props) => {
                 <span><Select className={classes.select} menuPlacement="top" isSearchable={false} placeholder="Select defense/hero" options={generateOptions()} onChange={id => props.defIdChanged(id)} /></span>
                 <div className={classes.sliders}><span className={classes.currentCC}>{props.ccSpace}</span><input className={classes.slider} type="range" min="0" max="3" value={props.ccSpace} onChange={(e) => props.ccSpaceChanged(e)} />CC Spell Space</div>
                 <div className={classes.sliders}><span className={classes.currentCC}>{props.defLvl}</span><input className={classes.slider} type="range" min="1" max={hp[props.defId]["hp"][0]} value={props.defLvl} onChange={(e) => props.defLvlChanged(e)} />{(props.defId < 4 && props.defId != 0) ? "Hero" : "Defense"} Level</div>
-                {(props.defId < 4 && props.defId != 0) ? <div className={classes.sliders}><span className={classes.currentCC}>{props.warden}</span><input class={classes.slider} type="range" min="1" max="55" value={props.warden} onChange={(e) => props.wardenChanged(e)} />Enemy Warden Level</div> : null}
+                {(props.defId < 4 && props.defId != 0) ? <div className={classes.sliders}><span className={classes.currentCC}>{props.warden}</span><input class={classes.slider} type="range" min="1" max="55" value={props.warden} onChange={(e) => props.wardenChanged(e)} />Enemy Warden</div> : null}
                 {/* <img src={buttonImg} className={classes.calcBtn} onClick={props.calculate} /> */}
             </div>
         </div >
