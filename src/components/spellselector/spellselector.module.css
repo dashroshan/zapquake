@@ -4,18 +4,14 @@
     background: linear-gradient(0deg, rgba(213, 217, 206, 1) 0%, rgba(238, 239, 231, 1) 75%, rgba(255, 255, 255, 1) 100%);
     border: white solid 0.3rem;
     margin: 1rem;
-    padding: 2rem 6rem;
+    padding: 2rem 10vw;
     border-radius: 1rem;
     box-shadow: 0 0.4rem 0.4rem rgb(55, 55, 55);
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 2rem;
-}
-
-.selectWrap {
-    display: flex;
-    justify-content: space-between;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) repeat(1, minmax(0, 3fr));
     text-align: center;
+    column-gap: 0.8rem;
+    align-items: center;
 }
 
 .sliderZap::-webkit-slider-thumb {
@@ -32,6 +28,7 @@
     background: linear-gradient(0deg, rgb(209, 210, 204) 0%, rgba(212, 211, 205, 1) 52%, rgba(237, 237, 237, 1) 100%);
     border-top: 0.2rem #ADABA5 solid;
     height: 6.2rem;
+    width: 7rem;
 }
 
 
@@ -41,8 +38,11 @@
     height: 0.7rem;
     width: 6rem;
     background: white;
-    margin: 0.13rem 0.5rem;
-    transform: translateY(0.11rem);
+    margin: 0.13rem 0rem;
+}
+
+.sliders .slider {
+    margin-right: 0.5rem;
 }
 
 .slider::-webkit-slider-thumb {
@@ -95,10 +95,11 @@ input {
     font-family: supercell;
     font-size: 1.1rem;
     text-align: center;
+    color: black;
 }
 
 .select {
-    margin: 0 0 1rem 0;
+    margin: 0.3rem 0 0.7rem 0;
     z-index: 5;
 }
 
@@ -117,7 +118,7 @@ input {
 }
 
 .currentCC {
-    width: 1.2rem;
+    width: 1.7rem;
     display: inline-block;
 }
 
@@ -136,7 +137,7 @@ input {
     border-radius: 0.3rem;
     display: inline-block;
     position: absolute;
-    transform: translate(-4.65rem, 3.3rem);
+    transform: translate(-4.67rem, 3.3rem);
     background-color: rgb(41, 47, 62);
     border: 0.12rem rgb(0, 0, 0) solid;
     font-size: 1rem;
@@ -149,7 +150,7 @@ input {
     border-radius: 0.3rem;
     display: inline-block;
     position: absolute;
-    transform: translate(-4.9rem, 3.3rem);
+    transform: translate(-4.67rem, 3.3rem);
     background-color: rgb(255, 179, 0);
     border: 0.12rem rgb(255, 225, 154) solid;
     font-size: 1rem;
@@ -168,17 +169,45 @@ input {
     font-size: 0.8rem;
 }
 
-@media (max-width: 45rem) {
-    .selectWrap {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 2rem;
-        margin: 0rem 4vw;
+.controlsWrap {
+    text-align: start;
+    padding: 0.15rem 1rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(0deg, rgb(209, 210, 204) 0%, rgba(212, 211, 205, 1) 52%, rgba(237, 237, 237, 1) 100%);
+    border-top: 0.2rem #ADABA5 solid;
+}
+
+@media (max-width: 64rem) {
+    .card {
+        padding: 2rem 3vw;
+    }
+}
+
+@media (max-width: 54rem) {
+    .card {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        row-gap: 1rem;
+        padding: 2rem 10vw;
     }
 
-    .selectWrap span {
-        margin-left: auto;
-        margin-right: auto;
+    .controlsWrap {
+        grid-area: 2 / 1 / 3 / 5;
+    }
+
+    .spellSection {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 38rem) {
+    .card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: minmax(2, 1fr) 1fr;
+        padding: 1rem;
+    }
+
+    .controlsWrap {
+        grid-area: 3 / 1 / 4 / 3;
     }
 }
