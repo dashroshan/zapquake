@@ -4,38 +4,18 @@
     background: linear-gradient(0deg, rgba(213, 217, 206, 1) 0%, rgba(238, 239, 231, 1) 75%, rgba(255, 255, 255, 1) 100%);
     border: white solid 0.3rem;
     margin: 1rem;
-    padding: 2rem 0;
+    padding: 2rem 6rem;
     border-radius: 1rem;
     box-shadow: 0 0.4rem 0.4rem rgb(55, 55, 55);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
 }
 
 .selectWrap {
     display: flex;
-    justify-content: space-evenly;
-}
-
-.slider {
-    margin-top: 0.7rem;
-    -webkit-appearance: none;
-    border-radius: 0.3rem;
-    height: 1rem;
-    width: 8rem;
-    background: white;
-}
-
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 30%;
-    cursor: pointer;
-    border: 0.15rem white solid;
-    transition: ease-in-out 300ms transform;
-}
-
-.slider::-webkit-slider-thumb:hover {
-    transform: scale(120%);
+    justify-content: space-between;
+    text-align: center;
 }
 
 .sliderZap::-webkit-slider-thumb {
@@ -47,10 +27,145 @@
 }
 
 .spellSection {
-    padding: 0.15rem 0.3rem 0.7rem 0.3rem;
+    padding: 0.15rem 0rem 0.7rem 0rem;
     border-radius: 0.5rem;
     background: linear-gradient(0deg, rgb(209, 210, 204) 0%, rgba(212, 211, 205, 1) 52%, rgba(237, 237, 237, 1) 100%);
     border-top: 0.2rem #ADABA5 solid;
+    height: 6.2rem;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    border-radius: 0.3rem;
+    height: 0.7rem;
+    width: 6rem;
+    background: white;
+    margin: 0.13rem 0.5rem;
+    transform: translateY(0.11rem);
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 30%;
+    cursor: pointer;
+    border: 2px white solid;
+    background-color: #5f5f5f;
+    transition: ease-in-out 300ms transform;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(110%);
+}
+
+.card span {
+    font-size: 1.1rem;
+}
+
+.wardenLvl {
+    width: 2rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    margin: 0 0.3rem;
+}
+
+.defLvl {
+    width: 3.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    margin: 0 0.3rem;
+}
+
+.warden {
+    margin-top: 0.4rem;
+    display: block;
+}
+
+.level {
+    margin-top: 0.7rem;
+    display: block;
+}
+
+input {
+    font-family: supercell;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.select {
+    margin: 0 0 1rem 0;
+    z-index: 5;
+}
+
+.calcBtn {
+    width: 13rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.4rem;
+    display: block;
+    cursor: pointer;
+    transition: ease-in-out 300ms transform;
+}
+
+.calcBtn:hover {
+    transform: scale(103%);
+}
+
+.currentCC {
+    width: 1.2rem;
+    display: inline-block;
+}
+
+.sliders {
+    margin: 0.5rem 0;
+}
+
+.spellImg {
+    width: 4.5rem;
+    border-radius: 0.5rem;
+    border: 0.15rem white solid;
+}
+
+.lvlBox {
+    width: 1.3rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-4.65rem, 3.3rem);
+    background-color: rgb(41, 47, 62);
+    border: 0.12rem rgb(0, 0, 0) solid;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.lvlBoxMax {
+    width: 1.3rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-4.9rem, 3.3rem);
+    background-color: rgb(255, 179, 0);
+    border: 0.12rem rgb(255, 225, 154) solid;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 2;
+    color: black;
+}
+
+.ccOrOwn {
+    position: absolute;
+    transform: translate(1.25rem, -4.85rem);
+    background-color: rgb(41, 47, 62);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.3rem;
+    border: 0.12rem rgb(0, 0, 0) solid;
+    font-size: 0.8rem;
 }
 
 @media (max-width: 45rem) {
