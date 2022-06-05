@@ -1,16 +1,18 @@
-import { SpellSelector } from './components/controls/controls';
-import { Combo } from './components/combo/combo';
 import './App.css';
 import { Component } from 'react';
+
 import { getCombos } from './calculator/process';
+import { Navbar } from './components/navbar/navbar';
+import { Combo } from './components/combo/combo';
+import { Controls } from './components/controls/controls';
 
 class App extends Component {
     state = {
-        zap: 1,
-        eq: 1,
-        cczap: 1,
-        cceq: 1,
-        ccSpace: 0,
+        zap: 8,
+        eq: 4,
+        cczap: 9,
+        cceq: 5,
+        ccSpace: 2,
         defId: 0,
         defLvl: 1,
         warden: 1,
@@ -92,7 +94,8 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <SpellSelector zapChanged={this.zapChanged} eqChanged={this.eqChanged} ccZapChanged={this.ccZapChanged} ccEqChanged={this.ccEqChanged} zap={this.state.zap} eq={this.state.eq} cczap={this.state.cczap} cceq={this.state.cceq} ccSpaceChanged={this.ccSpaceChanged} defIdChanged={this.defIdChanged} defId={this.state.defId} ccSpace={this.state.ccSpace} defLvl={this.state.defLvl} warden={this.state.warden} defLvlChanged={this.defLvlChanged} wardenChanged={this.wardenChanged} />
+                <Navbar />
+                <Controls zapChanged={this.zapChanged} eqChanged={this.eqChanged} ccZapChanged={this.ccZapChanged} ccEqChanged={this.ccEqChanged} zap={this.state.zap} eq={this.state.eq} cczap={this.state.cczap} cceq={this.state.cceq} ccSpaceChanged={this.ccSpaceChanged} defIdChanged={this.defIdChanged} defId={this.state.defId} ccSpace={this.state.ccSpace} defLvl={this.state.defLvl} warden={this.state.warden} defLvlChanged={this.defLvlChanged} wardenChanged={this.wardenChanged} />
                 {(this.state.defId) ? <Combo combos={this.state.combos} levels={[this.state.zap, this.state.eq, this.state.cczap, this.state.cceq]} /> : null}
             </div>
         );

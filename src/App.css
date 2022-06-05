@@ -13,4 +13,6 @@
 .App {
     color: #ffffff;
     font-family: "supercell";
+    background: linear-gradient(180deg, rgb(33, 33, 33) 30%, rgba(76, 76, 74, 1) 100%);
+    min-height: 100vh;
 }
