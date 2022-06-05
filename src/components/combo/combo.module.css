@@ -8,7 +8,7 @@
     border-radius: 1rem;
     display: flex;
     justify-content: center;
-    box-shadow: 0 0.4rem 0.4rem rgb(55, 55, 55);
+    box-shadow: 0 0.4rem 1rem rgb(28, 28, 28);
 }
 
 .spellImg {
@@ -23,7 +23,7 @@
     border-radius: 0.3rem;
     display: inline-block;
     position: absolute;
-    transform: translate(-4.9rem, 3.3rem);
+    transform: translate(-4.85rem, 3.3rem);
     background-color: rgb(41, 47, 62);
     border: 0.12rem rgb(0, 0, 0) solid;
     font-size: 1rem;

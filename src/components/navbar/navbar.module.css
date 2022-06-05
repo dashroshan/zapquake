@@ -1,18 +1,45 @@
-nav {
-    height: 5rem;
-    background: linear-gradient(0deg, rgba(54, 54, 54, 1) 30%, rgba(76, 76, 74, 1) 100%);
-    border-bottom: 0.5rem solid rgb(50, 50, 50);
-    border-top: 0.5rem solid rgb(83, 82, 82);
+.navImg {
+    width: 22rem;
+}
+
+.nav {
+    padding: 0.6rem 1rem 0 1rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
-.content {
-    text-align: center;
+.github {
+    height: 2.5rem;
+    transition: ease-in-out transform 300ms;
 }
 
-.navText {
-    width: 16rem;
-    cursor: pointer;
+.discord {
+    height: 2.5rem;
+    margin-left: 1rem;
+    height: 2.5rem;
+    transition: ease-in-out transform 300ms;
+}
+
+.github:hover {
+    transform: scale(110%);
+}
+
+.discord:hover {
+    transform: scale(110%);
+}
+
+@media (max-width: 38rem) {
+    .nav {
+        justify-content: center;
+        padding: 0.6rem 0 0 0;
+    }
+
+    .navImg {
+        width: 70vw;
+    }
+
+    .nav span {
+        display: none;
+    }
 }

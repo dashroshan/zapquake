@@ -1,0 +1,233 @@
+.card {
+    box-sizing: border-box;
+    background: rgb(213, 217, 206);
+    background: linear-gradient(0deg, rgba(213, 217, 206, 1) 0%, rgba(238, 239, 231, 1) 75%, rgba(255, 255, 255, 1) 100%);
+    border: white solid 0.3rem;
+    margin: 1rem;
+    margin-top: 0.5rem;
+    padding: 2rem 10vw;
+    border-radius: 1rem;
+    box-shadow: 0 0.4rem 1rem rgb(28, 28, 28);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) repeat(1, minmax(0, 3fr));
+    text-align: center;
+    column-gap: 0.8rem;
+    align-items: center;
+}
+
+.spellSection {
+    padding: 0.15rem 0rem 0.7rem 0rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(0deg, rgb(209, 210, 204) 0%, rgba(212, 211, 205, 1) 52%, rgba(237, 237, 237, 1) 100%);
+    border-top: 0.2rem #ADABA5 solid;
+    height: 6.4rem;
+    width: 7rem;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    border-radius: 0.3rem;
+    height: 0.7rem;
+    width: 6rem;
+    background: white;
+    margin: 0.13rem 0rem;
+}
+
+.sliders .slider {
+    margin-right: 0.5rem;
+    width: 8rem;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 30%;
+    cursor: pointer;
+    border: 2px white solid;
+    background-color: #5f5f5f;
+    transition: ease-in-out 300ms transform;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(110%);
+}
+
+.sliderZap::-webkit-slider-thumb {
+    background: #0066ff;
+}
+
+.sliderEq::-webkit-slider-thumb {
+    background: #d77142;
+}
+
+.card span {
+    font-size: 1.1rem;
+}
+
+.wardenLvl {
+    width: 2rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    margin: 0 0.3rem;
+}
+
+.defLvl {
+    width: 3.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    margin: 0 0.3rem;
+}
+
+.warden {
+    margin-top: 0.4rem;
+    display: block;
+}
+
+.level {
+    margin-top: 0.7rem;
+    display: block;
+}
+
+input {
+    font-family: supercell;
+    font-size: 1.1rem;
+    text-align: center;
+    color: black;
+}
+
+.select {
+    margin: 0.3rem 0 0.7rem 0;
+    z-index: 5;
+}
+
+.calcBtn {
+    width: 13rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.4rem;
+    display: block;
+    cursor: pointer;
+    transition: ease-in-out 300ms transform;
+}
+
+.calcBtn:hover {
+    transform: scale(103%);
+}
+
+.currentCC {
+    width: 1.7rem;
+    display: inline-block;
+}
+
+.sliders {
+    margin: 0.6rem 0;
+}
+
+.spellImg {
+    width: 4.5rem;
+    border-radius: 0.5rem;
+    border: 0.15rem white solid;
+    margin-top: 0.2rem;
+}
+
+.lvlBox {
+    width: 1.3rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-4.67rem, 3.5rem);
+    background-color: rgb(41, 47, 62);
+    border: 0.12rem rgb(0, 0, 0) solid;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.lvlBoxMax {
+    width: 1.3rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+    position: absolute;
+    transform: translate(-4.75rem, 3.55rem);
+    background-color: rgb(255, 179, 0);
+    border: 0.12rem rgb(255, 225, 154) solid;
+    font-size: 1rem;
+    text-align: center;
+    z-index: 2;
+    color: black;
+}
+
+.ccOrOwn {
+    position: absolute;
+    transform: translate(1.25rem, -4.85rem);
+    background-color: rgb(41, 47, 62);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.3rem;
+    border: 0.12rem rgb(0, 0, 0) solid;
+    font-size: 0.8rem;
+}
+
+.controlsWrap {
+    text-align: start;
+    padding: 0.15rem 1rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(0deg, rgb(209, 210, 204) 0%, rgba(212, 211, 205, 1) 52%, rgba(237, 237, 237, 1) 100%);
+    border-top: 0.2rem #ADABA5 solid;
+    color: #5f5f5f;
+}
+
+@media (max-width: 64rem) {
+    .card {
+        padding: 2rem 3vw;
+    }
+}
+
+@media (max-width: 54rem) {
+    .card {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        row-gap: 1rem;
+        padding: 2rem 10vw;
+    }
+
+    .controlsWrap {
+        grid-area: 2 / 1 / 3 / 5;
+    }
+
+    .spellSection {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 38rem) {
+    .card {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: minmax(2, 1fr) 1fr;
+        padding: 1rem;
+    }
+
+    .controlsWrap {
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .spellSection {
+        width: 9rem;
+    }
+
+    .slider {
+        width: 7rem;
+    }
+
+    .sliders .slider {
+        width: 8rem;
+    }
+
+    .ccOrOwn {
+        transform: translate(2.25rem, -4.85rem);
+    }
+}
