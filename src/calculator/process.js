@@ -19,6 +19,12 @@ const adjustWardenAura = (buildingHp, wardenLvl, buildingId) => {
 }
 
 const getCombos = (buildingId, buildingLvl, zapLvl, eqLvl, ccSpace, ccZapLvl, ccEqLvl, wardenLvl) => {
+    localStorage.setItem('zap', zapLvl);
+    localStorage.setItem('eq', eqLvl);
+    localStorage.setItem('cczap', ccZapLvl);
+    localStorage.setItem('cceq', ccEqLvl);
+    localStorage.setItem('ccSpace', ccSpace);
+
     let buildingHp = adjustWardenAura(hp[buildingId]["hp"][buildingLvl], wardenLvl, buildingId);
     let zapDmg = dmg[1][zapLvl];
     let ccZapDmg = dmg[1][ccZapLvl];

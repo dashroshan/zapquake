@@ -8,11 +8,11 @@ import { Controls } from './components/controls/controls';
 
 class App extends Component {
     state = {
-        zap: 8,
-        eq: 4,
-        cczap: 9,
-        cceq: 5,
-        ccSpace: 2,
+        zap: (localStorage.getItem('zap') == null) ? 1 : localStorage.getItem('zap'),
+        eq: (localStorage.getItem('eq') == null) ? 1 : localStorage.getItem('eq'),
+        cczap: (localStorage.getItem('cczap') == null) ? 1 : localStorage.getItem('cczap'),
+        cceq: (localStorage.getItem('cceq') == null) ? 1 : localStorage.getItem('cceq'),
+        ccSpace: (localStorage.getItem('ccSpace') == null) ? 0 : localStorage.getItem('ccSpace'),
         defId: 0,
         defLvl: 1,
         warden: 1,
