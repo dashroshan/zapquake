@@ -32,7 +32,6 @@
 @media (max-width: 38rem) {
     .nav {
         justify-content: center;
-        padding: 0.6rem 0 0 0;
     }
 
     .navImg {

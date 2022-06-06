@@ -8,7 +8,7 @@ for (let z = 0; z < 15; z++)
                 if ((z + e + cz + ce <= 14) && (cz + ce <= 3)) allPossibleCombos.push([z + e + cz + ce, z, e, cz, ce, cz + ce]);
 
 const adjustWardenAura = (buildingHp, wardenLvl, buildingId) => {
-    if (buildingId < 4) return buildingHp;
+    if (buildingId > 3) return buildingHp;
     if (wardenLvl > 40)
         wardenLvl = 40;
     let hpBoost = buildingHp * aura[wardenLvl][0];

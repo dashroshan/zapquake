@@ -79,6 +79,11 @@
     margin: 1rem 2rem;
 }
 
+.totalSpc {
+    text-align: center;
+    text-shadow: 0 0.4rem 0.6rem rgb(28, 28, 28);
+}
+
 @media (max-width: 45rem) {
     .combos {
         flex-direction: column;
