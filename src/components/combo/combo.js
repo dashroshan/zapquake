@@ -6,7 +6,7 @@ const Combo = (props) => {
     const comboTile = (img, type, total, level, spell) => {
         return (<div className={(total == 0) ? `${classes.wrapper} ${classes.greyOut}` : `${classes.wrapper}`}>
             <img className={classes.spellImg} src={img} />
-            <div className={(((spell == "zap" && level == 9) || (type == "eq" && level == 5))) ? classes.lvlBoxMax : classes.lvlBox}>{level}</div>
+            <div className={((spell == "zap" && level == 9) || (spell == "eq" && level == 5)) ? classes.lvlBoxMax : classes.lvlBox}>{level}</div>
             <div className={classes.ccOrOwn}>{type} x {total}</div>
         </div>);
     }
@@ -26,10 +26,13 @@ const Combo = (props) => {
         return combos;
     }
     return (
-        <div className={classes.combos}>
-            {(props.combos.length == 0) ? <div className={classes.card}>
-                <div className={classes.noCombo}>No valid combos found!</div>
-            </div> : allCombos()}
+        <div>
+            <div className={classes.totalSpc}>Total spell space: {props.combos[0].reduce((pv, cv) => pv + cv, 0)}</div>
+            <div className={classes.combos}>
+                {(props.combos.length == 0) ? <div className={classes.card}>
+                    <div className={classes.noCombo}>No valid combos found!</div>
+                </div> : allCombos()}
+            </div>
         </div>
     );
 }
