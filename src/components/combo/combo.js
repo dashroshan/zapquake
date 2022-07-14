@@ -27,7 +27,7 @@ const Combo = (props) => {
     }
     return (
         <div>
-            <div className={classes.totalSpc}>Total spell space: {props.combos[0].reduce((pv, cv) => pv + cv, 0)}</div>
+            {(props.combos.length == 0) ? null : <div className={classes.totalSpc}>Total spell space: {props.combos[0].reduce((pv, cv) => pv + cv, 0)}</div>}
             <div className={classes.combos}>
                 {(props.combos.length == 0) ? <div className={classes.card}>
                     <div className={classes.noCombo}>No valid combos found!</div>
