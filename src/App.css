@@ -1,18 +1,22 @@
 @font-face {
-    font-family: supercell;
-    src: url("./assets/thick.ttf");
-    font-weight: bold;
+  font-family: supercell;
+  src: url("./assets/thick.ttf");
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: supercell;
-    src: url("./assets/thin.ttf");
-    font-weight: normal;
+  font-family: supercell;
+  src: url("./assets/thin.ttf");
+  font-weight: normal;
 }
 
 .App {
-    color: #ffffff;
-    font-family: "supercell";
-    background: linear-gradient(180deg, rgb(33, 33, 33) 30%, rgba(76, 76, 74, 1) 100%);
-    min-height: 100vh;
+  color: #ffffff;
+  font-family: "supercell";
+  background: linear-gradient(
+    180deg,
+    rgb(33, 33, 33) 30%,
+    rgba(76, 76, 74, 1) 100%
+  );
+  min-height: 100vh;
 }
