@@ -19,7 +19,7 @@ const Combo = (props) => {
                 />
                 <div
                     className={
-                        (spell === "zap" && level === 9) || (spell === "eq" && level === 5)
+                        (spell === "zap" && level === 10) || (spell === "eq" && level === 5)
                             ? classes.lvlBoxMax
                             : classes.lvlBox
                     }
