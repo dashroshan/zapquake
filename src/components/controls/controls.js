@@ -6,7 +6,7 @@ import eqImg from "../../assets/quake.png";
 
 const generateOptions = () => {
     let options = [];
-    for (let i = 1; i <= 17; i++)
+    for (let i = 1; i <= 19; i++)
         options.push({ value: i, label: hp[i]["name"] });
     return options;
 };
