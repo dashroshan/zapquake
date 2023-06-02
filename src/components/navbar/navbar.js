@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className={classes.nav}>
             <a
-                href="https://clashverse.roshan.cyou"
+                href="https://clashverse.dashroshan.com"
                 target="_blank"
                 rel="noreferrer"
             >
@@ -31,7 +31,7 @@ const Navbar = () => {
                     />
                 </a>
                 <a
-                    href="https://clashverse.roshan.cyou/s"
+                    href="https://clashverse.dashroshan.com/s"
                     target="_blank"
                     rel="noreferrer"
                 >
